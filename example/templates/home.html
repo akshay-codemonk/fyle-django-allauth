@@ -1,0 +1,9 @@
+<!-- templates/home.html -->
+{% load socialaccount %}
+
+<h1>Fyle Django Allauth</h1>
+{% if user.is_authenticated %}
+<p>Welcome {{ user.email }} !!!</p>
+{% else %}
+<a href="{% provider_login_url 'fyle' %}">Sign In</a>
+{% endif %}
