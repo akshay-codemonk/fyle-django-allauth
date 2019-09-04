@@ -46,4 +46,4 @@ Goto django-admin at [http://localhost:8000/admin](http://localhost:8000/admin) 
    4. Final step is to add our site, in this case localhost to the Chosen sites on the bottom. Then click save.
 
 ### Sign in using Fyle
-Logout from django admin and head to ``http://localhost:8000`` and you should see a page with links to sign in using fyle.
+Logout from django admin and head to ``http://localhost:8000/home`` and you should see a page with links to sign in using fyle.
