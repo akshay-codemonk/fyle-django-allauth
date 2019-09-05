@@ -33,7 +33,7 @@ Fyle OAuth 2.0 provider for django-allauth, lets you associate Fyle accounts wit
     3. Click on create new app, enter the details and select type as OAuth 2.0
     4. For Redirect URI enter 
         1. 'http://localhost:8000/accounts/fyle/login/callback/' for development
-        2. 'https://<your-domain>/accounts/fyle/login/callback/' for production
+        2. 'https://your_domain/accounts/fyle/login/callback/' for production
     5. Note down the client_secret and client_id
     
 5. Open django-admin and create a new record under Social Applications
