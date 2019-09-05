@@ -44,3 +44,13 @@ Fyle OAuth 2.0 provider for django-allauth, lets you associate Fyle accounts wit
 
 6. Visit http://localhost:8000/accounts/fyle/login to login using your Fyle account.
 
+
+7. If using a custom user model then add the below lines to settings.py
+
+```
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+SOCIALACCOUNT_AUTO_SIGNUP = True
+``` 
