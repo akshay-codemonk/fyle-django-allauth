@@ -20,6 +20,9 @@ class FyleOAuth2Adapter(OAuth2Adapter):
     profile_url = '{0}/api/tpa/v1/employees'.format(web_url)
 
     def complete_login(self, request, app, token, **kwargs):
+        """
+        Returns a SocialLogin instance
+        """
         headers = {'Authorization': 'Bearer {0}'.format(token.token)}
         resp = requests.get(self.profile_url, headers=headers)
         extra_data = resp.json()
