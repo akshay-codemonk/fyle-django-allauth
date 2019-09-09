@@ -4,7 +4,8 @@ Fyle OAuth 2.0 provider for django-allauth, lets you associate Fyle accounts wit
 
 
 ## Dependencies
-[django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+Install  [django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html) and configure it.
+
 
 
 ## Quick start
@@ -46,11 +47,14 @@ Fyle OAuth 2.0 provider for django-allauth, lets you associate Fyle accounts wit
 
 
 7. If using a custom user model then add the below lines to settings.py
-
 ```
+# For custom user model that has email as the user identifying field
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None
-ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
-SOCIALACCOUNT_AUTO_SIGNUP = True
+
+# Disable verification mail [optional]
+ACCOUNT_EMAIL_VERIFICATION = 'none'  
 ``` 
+For more info on customisation refer the django-allauth [documentation](https://django-allauth.readthedocs.io/en/latest/advanced.html#custom-user-models)
