@@ -23,7 +23,7 @@ class FyleProvider(OAuth2Provider):
         """
         Extracts the unique user ID from `data`
         """
-        return str(data['data']['id'])
+        return str(data['data']['user_id'])
 
     def extract_common_fields(self, data):
         """
